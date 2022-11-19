@@ -47,7 +47,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        tag_name: autobuild
+        tag_name: Release
         release_name: Latest Release
         draft: false
         prerelease: true
