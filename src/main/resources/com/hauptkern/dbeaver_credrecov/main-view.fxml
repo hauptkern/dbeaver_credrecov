@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="340.0"
+      prefWidth="820.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.hauptkern.dbeaver_credrecov.CredRecoverController">
+   <HBox fillHeight="false">
+      <VBox.margin>
+         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+      </VBox.margin>
+      <TextField fx:id="filePathField" promptText="DBeaver Credential JSON File Path" HBox.hgrow="ALWAYS"/>
+      <Button mnemonicParsing="false" onMouseClicked="#openFileDialog" text="Select File">
+         <HBox.margin>
+            <Insets left="10.0"/>
+         </HBox.margin>
+      </Button>
+   </HBox>
+   <TableView fx:id="credentialsTable" VBox.vgrow="ALWAYS">
+      <columns>
+         <TableColumn fx:id="connectionNameColumn" maxWidth="-1.0" minWidth="300.0" prefWidth="-1.0"
+                      text="Connection Name"/>
+         <TableColumn fx:id="UserColumn" maxWidth="-1.0" minWidth="250.0" prefWidth="-1.0" text="User"/>
+         <TableColumn fx:id="PasswordColumn" maxWidth="-1.0" minWidth="250.0" prefWidth="-1.0" text="Password"/>
+      </columns>
+   </TableView>
+   <HBox alignment="CENTER_RIGHT" fillHeight="false">
+      <VBox.margin>
+         <Insets left="10.0" right="10.0"/>
+      </VBox.margin>
+      <Label alignment="CENTER" contentDisplay="CENTER" text="github.com/hauptkern" textAlignment="RIGHT"/>
+   </HBox>
+</VBox>
